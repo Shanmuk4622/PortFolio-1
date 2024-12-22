@@ -1,0 +1,123 @@
+body {
+    background-image: url(views/backImg-1.jpeg);
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0px;
+}
+
+.material-symbols-outlined {
+    color: #000;
+    margin: 10px;
+}
+
+#mainImg {
+    width: 200px;
+    align-self: end;
+    margin: 10%;
+}   
+
+.InfoContainer {
+    margin: 5px;
+}
+
+.Info {
+    display: flex;
+    margin: 5px 0px;
+}
+
+.div-1 {
+    width: 40%;
+}
+
+.div-2 {
+    width: 5%;
+}
+
+.div-3 {
+    width: 60%;
+}
+
+.FirstName {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.RemaName {
+    margin: 0px;
+}
+
+.btOne {
+    color: white;
+}
+
+.sideBox {
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+    box-shadow: rgba(red, green, blue, 0.7);
+    border-radius: 2px;
+    transition: all 0.5s linear;
+}
+
+.btTwo {
+    color: aliceblue;
+    position: absolute;
+    left: 270px;
+}
+
+.sideHead {
+    color: aliceblue;
+    font-size: 5vh;
+    padding: 10px;
+}
+
+.sideBoxMatt {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .sideBox {
+    left: 0px;
+}
+
+#check:checked ~.btOne {
+    display: none;
+}
+
+
+
+.slider {
+    width: 100%;
+    overflow : hidden;
+    border : 2px solid #000;
+    position : relative;
+}
+  
+  .slide-track {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition between slides */
+  }
+  
+  .slide {
+    min-width: 100%; /* One image at a time */
+    transition: transform 0.5s ease;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #ddd; /* Adds a border to each image */
+  }
+  
