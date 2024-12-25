@@ -119,11 +119,12 @@ main {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #eefff9;
 }
 
 .slider-container {
     display: flex;
+    background-color: #f1fffa;
     flex: 1;
     max-width: 1200px; /* Limit the width of the slider section */
     margin: 0 auto;
@@ -153,6 +154,7 @@ main {
     width: 300px; /* Fixed width for side content */
     padding: 20px;
     background-color: #fff; /* White background for contrast */
+    background-color: #feffff;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin-left: 20px; /* Space between slider and side content */
@@ -213,7 +215,7 @@ button {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #eefff9;
     position: relative; /* Add this to position buttons relative to the section */
 }
 
@@ -384,7 +386,7 @@ button {
 .skills {
     text-align: center;
     padding: 2rem;
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #cd6464; /* White background for contrast */
     border-top: 5px solid #007bff; /* Top border for emphasis */
 }
 
@@ -417,7 +419,7 @@ button {
 
 .projects {
     padding: 2rem;
-    background-color: #f9f9f9; /* Light background for contrast */
+    background-color: #e8f9f6; /* Light background for contrast */
     text-align: center; /* Center text */
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -433,10 +435,11 @@ button {
     display: flex; /* Flexbox for layout */
     flex-wrap: wrap; /* Allow wrapping */
     justify-content: center; /* Center items */
+    background-color: #e8f9f6;
 }
 
 .project {
-    background-color: #ffffff; /* White background for project cards */
+    background-color: #f8f8f8; /* White background for project cards */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin: 1rem; /* Space between project cards */
@@ -538,4 +541,201 @@ button {
 
 .menu-icon:hover {
     background-color: rgba(44, 62, 80, 0.9); /* Darker shade on hover */
+}
+.skills {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e0fdf8; /* White background for contrast */
+    border-top: 5px solid var(--primary-color); /* Top border for emphasis */
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between skill categories */
+}
+
+.skill-category {
+    background-color: #f3f3f3; /* Light gray background for skill categories */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside each category */
+    width: 200px; /* Fixed width for each category */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.skill-category:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #007bff; /* Light Blue on hover */
+    color: #fff; /* Change text color to white for contrast */
+}
+
+.skill-category h3 {
+    font-size: 1.5rem; /* Category title size */
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+.skill-category p {
+    font-size: 1rem; /* Description size */
+    color: #555; /* Dark gray text for description */
+}
+.languages {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e0fdf8; /* White background for contrast */
+    border-top: 5px solid var(--primary-color); /* Top border for emphasis */
+}
+
+.languages h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.languages-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between language categories */
+}
+
+.language-category {
+    background-color: #f0f0f0; /* Light gray background for language categories */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside each category */
+    width: 200px; /* Fixed width for each category */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.language-category:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #007bff; /* Light Blue on hover */
+    color: #fff; /* Change text color to white for contrast */
+}
+
+.language-category h3 {
+    font-size: 1.5rem; /* Category title size */
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+.language-category p {
+    font-size: 1rem; /* Description size */
+    color: #555; /* Dark gray text for description */
+}
+
+
+
+.contact-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.contact-btn {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    padding: 10px 15px;
+    background-color: #28a745;
+    background-color: #007bff; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* z-index: 1000; */
+}
+/* CSS Variables for Color Scheme */
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --background-color: #ecf0f1; /* Light Gray */
+    --text-color: #2c3e50; /* Dark Gray */
+}
+
+/* Applying Colors */
+body {
+background-color: var(--background-color);
+color: var(--text-color);
+font-family: Arial, sans-serif;
+}
+
+header {
+background-color: var(--primary-color);
+color: white;
+padding: 1rem;
+text-align: center;
+}
+
+nav ul {
+background: var(--secondary-color);
+list-style: none;
+padding: 0;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+padding: 10px;
+}
+
+nav ul li a:hover {
+background-color: var(--primary-color);
+}
+@media (max-width: 600px) {
+    header {
+      background-color: var(--secondary-color); /* Change header color on small screens */
+    }
+}
+.button {
+    color: var(--primary-color);
+    border: 2px solid currentColor; /* Border color matches text color */
+    transition: color 0.3s;
+}
+  
+.button:hover {
+    color: var(--secondary-color); /* Change color on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Max width for larger screens */
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

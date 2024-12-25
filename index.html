@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <button class="contact-btn" id="contactBtn">Contact Me</button>
   <main>
     <input type="checkbox" id="check" style="display: none;">
     <div class="btOne">
@@ -25,7 +27,7 @@
         <div class="sideHead">Shanmukesh</div>
         <ul class="sideNav">
           <li><i class="material-symbols-outlined">home</i> <a href="index.html">Home</a></li>
-          <li><i class="material-symbols-outlined">person</i> <a href="#">About Me</a></li>
+          <li><i class="material-symbols-outlined">person</i> <a href="aboutme.html">About Me</a></li>
           <li><i class="material-symbols-outlined">school</i> <a href="#">Education</a></li>
           <li><i class="material-symbols-outlined">workspace_premium</i> <a href="#">Certifications</a></li>
           <li><i class="material-symbols-outlined">work</i> <a href="#">Achievements</a></li>
@@ -39,23 +41,14 @@
     <div class="hero-content">
       <img src="views/MyImg(1).jpg" alt="Profile Picture" class="mainImg">
       <h1>Bonala Shanmukesh</h1>
+      <p>B.Tech 2nd Year | CSE | VIT-AP</p>
       <p>"A passionate software developer crafting innovative solutions."</p>
       <p>Age: 19 | Date of Birth: 26-02-2005</p>
       <p>Currently exploring AI, Blockchain, and Full Stack Development.</p>
       <a href="#projects" class="btn">View My Projects</a>
       <br>
-      <a href="resume.pdf" class="btn" download>View My Resume</a>
+      <a href="resume.pdf" class="btn">View My Resume</a>
     </div>
-  </section>
-
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-        <li>Python</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>HTML/CSS</li>
-    </ul>
   </section>
 
   <section class="projects" id="projects">
@@ -108,6 +101,62 @@
     <button class="load-more btn" id="loadMore">Load More Projects</button>
   </section>
 
+
+<!--Frontend: React, Angular, or Bootstrap.     Backend: Node.js, Django, or Flask.    Database: MySQL, MongoDB, Firebase.    DevOps: Docker, Kubernetes.   AI/ML: TensorFlow, PyTorch, Scikit-learn.-->
+  <section class="skills">
+    <h2>Skills</h2>
+    
+    <div class="skills-container">
+        <div class="skill-category">
+            <h3>Frontend</h3>
+            <p>React, Angular, Bootstrap</p>
+        </div>
+        <div class="skill-category">
+            <h3>Backend</h3>
+            <p>Node.js, Django, Flask</p>
+        </div>
+        <div class="skill-category">
+            <h3>Database</h3>
+            <p>MySQL, MongoDB, Firebase</p>
+        </div>
+        <div class="skill-category">
+            <h3>DevOps</h3>
+            <p>Docker, Kubernetes</p>
+        </div>
+        <div class="skill-category">
+            <h3>AI/ML</h3>
+            <p>TensorFlow, PyTorch, Scikit-learn</p>
+        </div>
+    </div>
+    <br>
+    <section class="languages">
+        <h2>Languages</h2>
+        <div class="languages-container">
+            <div class="language-category">
+                <h3>Programming Languages</h3>
+                <p>JavaScript, Python, Java, C++</p>
+            </div>
+            <div class="language-category">
+                <h3>Spoken Languages</h3>
+                <p>English, Spanish, Hindi, Telugu</p>
+            </div>
+        </div>
+    </section>
+  </section>
+
+
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Contact Me</h2>
+
+        <p>Email me : <a href="mailto:shanmukesh.bonala@gmail.com">shanmukesh.bonala@gmail.com</a></p><a href="mailto:shanmukesh.bonala@gmail.com">send mail</a>
+        <p>Phone: <a href="tel:+91 9989278339">+91 9989278339</a></p><a href="tel:+91 9989278339">make call</a>
+        <p>Whatsapp : <a>9989278339</a></p>
+    </div>
+</div>
+  
+
   <section class="slider-section">
     <div class="slider-container">
         <div class="slider">
@@ -136,26 +185,28 @@
   <footer class="footer">
     <div class="footer-container">
         <div class="footer-info">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
-            <p>Address: 123 Main St, City, Country</p>
+            <h3>My Contact</h3>
+            <p>Email: <a href="mailto:shanmukesh.bonala@gmail.com">shanmukesh.bonala@gmail.com</a></p>
+            <p>Phone: <a href="tel:+91 9989278339">+91 9989278339</a></p>
+            <p>Address: Ananthapur , Andhra Pradesh, India</p>
         </div>
         <div class="footer-links">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Projects</a></li>
             </ul>
         </div>
         <div class="footer-social">
-            <h3>Follow Us</h3>
+            <h3>Follow Me</h3>
             <div class="social-icons">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/shanmukesh-bonala-731697288/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                <a href="https://github.com/Shanmuk4622" aria-label="GitHub"><i class="fab fa-github"></i> Github</a><br>
+                <a href="https://x.com/Shanmukesh4622" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a><br>
+                <a href="https://www.instagram.com/shanmuk4622k/" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a><br>
+                <a href="https://www.facebook.com/shanmukesh.bonala" aria-label="facebook"><i class="fab fa-facebook"></i> Facebook</a>
             </div>
         </div>
         <!-- <div class="footer-newsletter">
@@ -167,11 +218,11 @@
         </div> -->
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2023 Bonala Shanmukesh. All rights reserved.</p>
+        <p>&copy; 2025 Bonala Shanmukesh. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
   <button id="scrollToTop" class="scroll-to-top">↑</button>
+  <script src="main.js"></script>
 </body>
 </html>
