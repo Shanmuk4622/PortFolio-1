@@ -1,0 +1,541 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #b82bb3, #2941ac);
+    color: #333;
+}
+
+main {
+    position: relative;
+}
+
+.menu-icon, .close-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btOne {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+}
+
+.sideBox {
+    position: fixed;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, #3f4342, #526c6f);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    transition: left 0.3s ease;
+}
+
+#check:checked ~ .sideBox {
+    left: 0;
+}
+
+#check:checked ~ .btOne {
+    display: none;
+}
+
+.sideHead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sideNav {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sideNav li {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.sideNav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+.mainImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.skills {
+    text-align: center;
+    padding: 2rem;
+}
+
+.skills h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.slider-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.slider-container {
+    display: flex;
+    flex: 1;
+    max-width: 1200px; /* Limit the width of the slider section */
+    margin: 0 auto;
+}
+
+.slider {
+    flex: 1;
+    display: flex;
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position for absolute elements */
+}
+
+.slide {
+    min-width: 100%; /* Show one slide at a time */
+    transition: transform 0.5s ease; /* Smooth transition */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%; /* Full width of the slide */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.side-content {
+    width: 300px; /* Fixed width for side content */
+    padding: 20px;
+    background-color: #fff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: 20px; /* Space between slider and side content */
+}
+
+button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners */
+    
+}
+
+.prev {
+    left: 10px; /* Position for previous button */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure buttons are above other content */
+}
+
+.next {
+    right: 10px; /* Position for next button */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure buttons are above other content */
+}
+
+@media (max-width: 768px) {
+    .slider-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .side-content {
+        width: 100%; /* Full width for side content on small screens */
+        margin-top: 20px; /* Space above side content */
+    }
+
+    .slider-container {
+        flex-direction: column; /* Stack slider and side content */
+    }
+
+    .slider {
+        width: 100%; /* Full width for slider */
+    }
+
+    .slide img {
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.slider-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    position: relative; /* Add this to position buttons relative to the section */
+}
+
+button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    padding: 10px 15px; /* Adjust padding for a better look */
+    border-radius: 5px; /* Rounded corners */
+     /* Ensure buttons are above other content */
+}
+
+.prev {
+    left: 10px; /* Position for previous button */
+    cursor: pointer;
+    position: absolute; 
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 10;
+}
+
+.next {
+    right: 10px;
+     /* Position for next button */
+     cursor: pointer;
+    position: absolute; 
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 10;
+}
+.slide {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.slide.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.footer {
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    padding: 2rem 1rem; /* Padding for spacing */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space between items */
+}
+
+.footer-info, .footer-links, .footer-social, .footer-newsletter {
+    flex: 1; /* Allow each section to grow */
+    min-width: 200px; /* Minimum width for responsiveness */
+    margin: 1rem; /* Margin for spacing */
+}
+
+.footer h3 {
+    margin-bottom: 1rem; /* Space below headings */
+}
+
+.footer a {
+    color: white; /* White links */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-newsletter form {
+    display: flex; /* Flexbox for form layout */
+}
+
+.footer-newsletter input {
+    flex: 1; /* Input takes available space */
+    padding: 0.5rem; /* Padding for input */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.footer-newsletter button {
+    padding: 0.5rem 1rem; /* Padding for button */
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.footer-bottom {
+    text-align: center; /* Centered text */
+    margin-top: 2rem; /* Space above */
+    font-size: 0.9rem; 
+}
+
+.footer-bottom p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .footer-info, .footer-links, .footer-social, .footer-newsletter {
+        text-align: center; /* Center text for smaller screens */
+        margin: 1rem 0; /* Margin for spacing */
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem; /* Increased padding for more space */
+    text-align: center;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+    color: white; /* White text for contrast */
+}
+
+.hero-content {
+    max-width: 800px; /* Limit width for better readability */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 2rem; /* Padding for content */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.mainImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid white; /* White border around the image */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.skills {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff; /* White background for contrast */
+    border-top: 5px solid #007bff; /* Top border for emphasis */
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.skills-list li {
+    margin: 0.5rem 1rem; /* Space between items */
+    padding: 10px 15px; /* Padding for items */
+    background-color: #e9ecef; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.skills-list li:hover {
+    background-color: #007bff; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.projects {
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center; /* Center text */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.projects-container {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+}
+
+.project {
+    background-color: #ffffff; /* White background for project cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 1rem; /* Space between project cards */
+    padding: 1rem; /* Padding inside project cards */
+    width: 300px; /* Fixed width for project cards */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.project-image {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.project h3 {
+    margin: 1rem 0 0.5rem; /* Space above and below the title */
+}
+
+.project p {
+    font-size: 0.9rem; /* Smaller font size for descriptions */
+    margin-bottom: 1rem; /* Space below description */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project {
+        width: 90%; /* Full width on smaller screens */
+    }
+}
+.load-more {
+    margin-top: 1rem; /* Space above the button */
+    display: block; 
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.load-more:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Center the button */
+.projects {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white-color);
+    background-color: rgba(44, 62, 80, 0.7); /* Semi-transparent dark background */
+    border-radius: 10%; /* Make it circular */
+    padding: 10px; /* Add some padding around the icon */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.menu-icon:hover {
+    background-color: rgba(44, 62, 80, 0.9); /* Darker shade on hover */
+}
